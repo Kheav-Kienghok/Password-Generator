@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-header">🔑 Welcome to the Password Generator 🔑</h1>
+        <form>
+            <div class="form-switch">
+                <span>Include Upper Case Letters</span>
+                <input type="checkbox" id="upperCase" onchange="checkCriteria()">
+                <label for="upperCase"></label>
+            </div>
+            <div class="form-switch">
+                <span>Include Lower Case Letters</span>
+                <input type="checkbox" id="lowerCase" onchange="checkCriteria()">
+                <label for="lowerCase"></label>
+            </div>
+            <div class="form-switch">
+                <span>Include Special Characters</span>
+                <input type="checkbox" id="specialChars" onchange="checkCriteria()">
+                <label for="specialChars"></label>
+            </div>
+            <div class="form-switch">
+                <span>Include Numbers</span>
+                <input type="checkbox" id="numbers" onchange="checkCriteria()">
+                <label for="numbers"></label>
+            </div>
+            <div class="form-group">
+                <label for="length">Password Length:</label>
+                <input type="number" id="length" class="form-control" value="8" min="4" max="20" onchange="checkCriteria()">
+            </div>
+            <button type="button" id="generateBtn" class="btn" onclick="generatePassword()" disabled>Generate Password 💻</button>
+        </form>
+        <div class="generated-password animated-password" id="generatedPasswordContainer" style="display: none;">
+            <p>Your Generated Password:</p>
+            <p><span id="password"></span></p>
+            <button class="btn btn-secondary" id="copyBtn" onclick="copyPassword()" disabled>Copy to Clipboard 📋</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
