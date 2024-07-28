@@ -4,6 +4,8 @@
 
 The **Password Generator** is a web application designed to help users create strong, secure passwords. It offers customization options for including uppercase letters, lowercase letters, special characters, and numbers. Users can also specify the length of the password, ensuring they get a password that meets their security requirements.
 
+**Try it out live:** [Password Generator Website](https://kheav-kienghok.github.io/Password-Generator/)
+
 ## ✨ Features
 
 - ✅ **Customizable Options**: Choose to include uppercase letters, lowercase letters, special characters, and numbers.
