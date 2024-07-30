@@ -14,6 +14,15 @@ function checkCriteria() {
     }
 }
 
+function shuffleString(str) {
+    let array = str.split('');
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; 
+    }
+    return array.join('');
+}
+
 function generatePassword() {
     const includeUpperCase = document.getElementById("upperCase").checked;
     const includeLowerCase = document.getElementById("lowerCase").checked;
@@ -32,6 +41,8 @@ function generatePassword() {
     if (includeSpecial) characterPool += specialChars;
     if (includeNumbers) characterPool += numberChars;
 
+    characterPool = shuffleString(characterPool);
+
     let password = "";
     let lastChar = "";
     let repeatCount = 0;
@@ -46,7 +57,7 @@ function generatePassword() {
             repeatCount = 0;
         }
 
-        if (repeatCount < 2) {
+        if (repeatCount <= 2) {
             password += newChar;
             lastChar = newChar;
         } else {

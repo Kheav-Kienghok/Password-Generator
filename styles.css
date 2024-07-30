@@ -5,7 +5,7 @@ body {
 
 .container {
     max-width: 500px;
-    margin-top: 50px;
+    margin-top: 70px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -17,7 +17,7 @@ h1 {
     color: #4CAF50;
     margin-bottom: 20px;
     text-align: center;
-    animation: slideInFromTop 1s ease-out, bounce 1.5s infinite 1s;
+    animation: slideInFromTop 1s ease-out, bounce 2.0s infinite 1s;
 }
 
 .form-switch {
